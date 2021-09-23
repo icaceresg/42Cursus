@@ -1,8 +1,19 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: icaceres <icaceres@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2021/09/23 16:21:32 by icaceres          #+#    #+#              #
+#    Updated: 2021/09/23 16:53:11 by icaceres         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 CC = gcc
 CFLAGS = -Wall -Werror -Wextra
 
 NAME = libft.a
-INCLUDE = libft.h
 
 SRCS = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 		  	ft_strlen.c ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c \
@@ -12,9 +23,9 @@ SRCS = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 			ft_strtrim.c ft_putchar_fd.c ft_putstr_fd.c ft_putnbr_fd.c\
 			ft_putendl_fd.c ft_strmapi.c ft_striteri.c ft_itoa.c ft_split.c
 
-BONUS_S = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c ft_lstlast_bonus.c \
-		ft_lstadd_ba ck_bonus.c ft_lstdelone_bonus.c ft_lstclear_bonus.c ft_lstiter_bonus.c \
-		ft_lstmap_bonus.c
+BONUS_S = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c\
+			ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c\
+			ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c
 
 OBJS = $(SRCS:.c=.o)
 
@@ -22,21 +33,17 @@ BONUS_O = $(BONUS_S:.c=.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJS) $(INCLUDE)
-			$(LIB1) $(NAME) $(OBJS)
-			$(LIB2) $(NAME)
+$(NAME): $(OBJS)
+			@ar  rcs $(NAME) $(OBJS)
 
 bonus:		$(NAME) $(BONUS_O)
-			$(LIB1) $(NAME) $(BONUS_O)
-			$(LIB2) $(NAME)
-%.o: %.c
-	$(CC) $(CFLAGS) -c $@ -o $<
+			@ar rcs $(NAME) $(BONUS_O)
 
 clean:
-	rm -f $(OBJS) $(BONUS)
+	rm -rf $(OBJS) $(BONUS_O)
 
 fclean: clean
-	rm -f $(OBJS)
+	rm -rf $(OBJS)
 
 re: fclean all
 
