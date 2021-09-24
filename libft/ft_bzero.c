@@ -6,11 +6,11 @@
 /*   By: icaceres <icaceres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 17:16:02 by icaceres          #+#    #+#             */
-/*   Updated: 2021/09/13 18:48:06 by icaceres         ###   ########.fr       */
+/*   Updated: 2021/09/24 16:44:45 by icaceres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

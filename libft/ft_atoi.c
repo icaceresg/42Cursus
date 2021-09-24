@@ -6,13 +6,13 @@
 /*   By: icaceres <icaceres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 16:35:20 by icaceres          #+#    #+#             */
-/*   Updated: 2021/09/17 15:04:01 by icaceres         ###   ########.fr       */
+/*   Updated: 2021/09/24 16:44:36 by icaceres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-unsigned long	pick_num(const char *str, int i, int flag)
+static unsigned long	pick_num(const char *str, int i, int flag)
 {
 	unsigned long	num;
 	unsigned long	mod;

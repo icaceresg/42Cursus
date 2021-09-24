@@ -6,15 +6,11 @@
 /*   By: icaceres <icaceres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 19:49:15 by icaceres          #+#    #+#             */
-/*   Updated: 2021/09/16 18:51:35 by icaceres         ###   ########.fr       */
+/*   Updated: 2021/09/24 16:58:45 by icaceres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-
-size_t	ft_strlen(const char *s);
-void	*ft_memcpy(void *dst, const void *src, size_t n);
+#include "libft.h"
 
 char	*ft_strdup(const char *s1)
 {

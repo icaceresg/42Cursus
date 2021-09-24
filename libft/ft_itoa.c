@@ -6,13 +6,13 @@
 /*   By: icaceres <icaceres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 17:46:03 by icaceres          #+#    #+#             */
-/*   Updated: 2021/09/21 17:14:36 by icaceres         ###   ########.fr       */
+/*   Updated: 2021/09/24 16:55:52 by icaceres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	check(int *flag, long num, int i)
+static int	check(int *flag, long num, int i)
 {
 	if (num < 0)
 	{
@@ -28,7 +28,7 @@ int	check(int *flag, long num, int i)
 	return (i);
 }
 
-char	*complete(char *ptr, int flag, long num, int i)
+static char	*complete(char *ptr, int flag, long num, int i)
 {
 	int	rest;
 

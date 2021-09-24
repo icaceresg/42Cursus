@@ -6,11 +6,11 @@
 /*   By: icaceres <icaceres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 13:24:26 by icaceres          #+#    #+#             */
-/*   Updated: 2021/09/16 19:21:19 by icaceres         ###   ########.fr       */
+/*   Updated: 2021/09/24 16:59:23 by icaceres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

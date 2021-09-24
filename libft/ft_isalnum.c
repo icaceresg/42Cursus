@@ -6,9 +6,11 @@
 /*   By: icaceres <icaceres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 15:22:10 by icaceres          #+#    #+#             */
-/*   Updated: 2021/09/13 16:51:52 by icaceres         ###   ########.fr       */
+/*   Updated: 2021/09/24 16:54:46 by icaceres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isalnum(int c)
 {

@@ -6,11 +6,11 @@
 /*   By: icaceres <icaceres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 15:41:44 by icaceres          #+#    #+#             */
-/*   Updated: 2021/09/17 13:27:45 by icaceres         ###   ########.fr       */
+/*   Updated: 2021/09/24 16:59:31 by icaceres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {

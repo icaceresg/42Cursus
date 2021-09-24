@@ -6,14 +6,11 @@
 /*   By: icaceres <icaceres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 17:21:28 by icaceres          #+#    #+#             */
-/*   Updated: 2021/09/16 18:39:34 by icaceres         ###   ########.fr       */
+/*   Updated: 2021/09/24 16:45:11 by icaceres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-
-void	ft_bzero(void *s, size_t n);
+#include "libft.h"
 
 void	*ft_calloc(size_t count, size_t size)
 {

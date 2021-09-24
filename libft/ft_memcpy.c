@@ -6,12 +6,11 @@
 /*   By: icaceres <icaceres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 18:11:49 by icaceres          #+#    #+#             */
-/*   Updated: 2021/09/15 17:09:00 by icaceres         ###   ########.fr       */
+/*   Updated: 2021/09/24 16:57:22 by icaceres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {

@@ -6,11 +6,11 @@
 /*   By: icaceres <icaceres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 14:15:12 by icaceres          #+#    #+#             */
-/*   Updated: 2021/09/16 20:49:22 by icaceres         ###   ########.fr       */
+/*   Updated: 2021/09/24 16:57:05 by icaceres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

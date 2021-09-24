@@ -6,9 +6,11 @@
 /*   By: icaceres <icaceres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 11:55:18 by icaceres          #+#    #+#             */
-/*   Updated: 2021/09/14 12:25:54 by icaceres         ###   ########.fr       */
+/*   Updated: 2021/09/24 17:00:03 by icaceres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_toupper(int c)
 {

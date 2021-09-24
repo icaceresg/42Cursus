@@ -6,9 +6,11 @@
 /*   By: icaceres <icaceres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 15:17:14 by icaceres          #+#    #+#             */
-/*   Updated: 2021/09/13 15:33:43 by icaceres         ###   ########.fr       */
+/*   Updated: 2021/09/24 16:55:22 by icaceres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isdigit(int c)
 {

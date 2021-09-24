@@ -6,12 +6,11 @@
 /*   By: icaceres <icaceres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/17 20:18:38 by icaceres          #+#    #+#             */
-/*   Updated: 2021/09/21 21:00:29 by icaceres         ###   ########.fr       */
+/*   Updated: 2021/09/24 16:58:17 by icaceres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
 static size_t	len_string(size_t i, char const *s, char c)
 {
@@ -55,7 +54,7 @@ static void	divide(char const *s, char c, char **ptr)
 	}
 }
 
-char	**total_string(char const *s)
+static char	**total_string(char const *s)
 {
 	char	**ptr;
 
@@ -68,7 +67,7 @@ char	**total_string(char const *s)
 	return (ptr);
 }
 
-size_t	counter(char const *s, char c, size_t *i)
+static size_t	counter(char const *s, char c, size_t *i)
 {
 	size_t	count;
 
