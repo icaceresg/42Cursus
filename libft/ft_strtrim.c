@@ -6,7 +6,7 @@
 /*   By: icaceres <icaceres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/17 15:55:59 by icaceres          #+#    #+#             */
-/*   Updated: 2021/09/21 20:05:22 by icaceres         ###   ########.fr       */
+/*   Updated: 2021/09/26 17:28:46 by icaceres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static int	search(char const c, char const *set)
 	return (0);
 }
 
-void	search_init_last(size_t *init,
+static void	search_init_last(size_t *init,
 	size_t *last, char const *s1, char const *set)
 {
 	*init = 0;

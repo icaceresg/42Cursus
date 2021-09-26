@@ -6,7 +6,7 @@
 /*   By: icaceres <icaceres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/17 20:18:38 by icaceres          #+#    #+#             */
-/*   Updated: 2021/09/24 16:58:17 by icaceres         ###   ########.fr       */
+/*   Updated: 2021/09/26 17:26:45 by icaceres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,42 +16,10 @@ static size_t	len_string(size_t i, char const *s, char c)
 {
 	size_t	count;
 
-	count = 0;
-	while (s[i] != '\0' && s[i] != c)
-	{
-		count++;
+	count = i;
+	while (s[i] != c && s[i] != '\0')
 		i++;
-	}
-	return (count);
-}
-
-static void	divide(char const *s, char c, char **ptr)
-{
-	size_t	count;
-	size_t	i;
-	size_t	k;
-	size_t	j;
-
-	i = 0;
-	k = 0;
-	j = 0;
-	while (s[i] != '\0')
-	{
-		if ((s[i] != c && s[i - 1] == c) || (i == 0 && s[i] != c))
-		{
-			count = len_string (i, s, c);
-			ptr[j] = (char *) malloc (sizeof(char) * (count + 1));
-			if (ptr[j] == NULL)
-				ptr[j] = NULL;
-			ptr[j][count] = '\0';
-			while (count-- > 0)
-				ptr[j][k++] = s[i++];
-			k = 0;
-			j++;
-		}
-		if (s[i] != '\0')
-			i++;
-	}
+	return (i - count + 2);
 }
 
 static char	**total_string(char const *s)
@@ -67,20 +35,51 @@ static char	**total_string(char const *s)
 	return (ptr);
 }
 
-static size_t	counter(char const *s, char c, size_t *i)
+static size_t	counter(char const *s, char c)
 {
 	size_t	count;
+	size_t	i;
 
 	count = 0;
+	i = 0;
 	if (s[0] != c)
 		count++;
-	while (s[*i] != '\0')
+	while (s[i] != '\0')
 	{
-		if (s[*i] == c && s[(*i) + 1] != c && s[(*i) + 1] != '\0')
+		if (s[i] == c)
+		{
+			while (s[i + 1] == c)
+				i++;
 			count++;
-		(*i)++;
+		}
+		i++;
 	}
+	if (s[i - 1] != c)
+		count++;
 	return (count);
+}
+
+static void	field(char **ptr, char const *s, char c)
+{
+	size_t	i;
+	size_t	count;
+
+	i = 0;
+	count = 0;
+	if (s[i] != c)
+	{
+		ptr[count] = malloc (len_string(i, s, c) * sizeof(char));
+		ft_strlcpy(ptr[count++], &s[i], len_string(i, s, c) - 1);
+	}
+	while (s[++i] != '\0')
+	{
+		if (s[i - 1] == c && s[i] != c)
+		{
+			ptr[count] = malloc((len_string(i, s, c)) * sizeof(char));
+			ft_strlcpy(ptr[count++], &s[i], len_string(i, s, c) - 1);
+		}
+	}
+	ptr[count] = NULL;
 }
 
 char	**ft_split(char const *s, char c)
@@ -90,9 +89,10 @@ char	**ft_split(char const *s, char c)
 	char	**ptr;
 
 	i = 0;
+	count = 0;
 	if (s == NULL || *s == '\0')
 	{
-		ptr = (char **) malloc (sizeof(char *) * 1);
+		ptr = malloc (sizeof(char *) * 1);
 		if (ptr == NULL)
 			return (NULL);
 		ptr[0] = NULL;
@@ -100,13 +100,9 @@ char	**ft_split(char const *s, char c)
 	}
 	if (c == '\0')
 		return (total_string(s));
-	count = counter(s, c, &i);
-	if (count == 0 && s[i - 1] != c)
-		return (total_string(s));
-	ptr = (char **) malloc (sizeof (char *) * (count + 1));
+	ptr = malloc (sizeof (char *) * (counter(s, c)));
 	if (ptr == NULL)
 		return (NULL);
-	divide(s, c, ptr);
-	ptr[count] = NULL;
+	field(ptr, s, c);
 	return (ptr);
 }
