@@ -6,7 +6,7 @@
 #    By: icaceres <icaceres@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/23 16:21:32 by icaceres          #+#    #+#              #
-#    Updated: 2021/09/23 16:53:11 by icaceres         ###   ########.fr        #
+#    Updated: 2021/09/26 19:15:52 by icaceres         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,16 +34,16 @@ BONUS_O = $(BONUS_S:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJS)
-			@ar  rcs $(NAME) $(OBJS)
+			ar  rcs $(NAME) $(OBJS)
 
 bonus:		$(NAME) $(BONUS_O)
-			@ar rcs $(NAME) $(BONUS_O)
+			ar rcs $(NAME) $(BONUS_O)
 
 clean:
 	rm -rf $(OBJS) $(BONUS_O)
 
 fclean: clean
-	rm -rf $(OBJS)
+	rm -rf $(NAME)
 
 re: fclean all
 
